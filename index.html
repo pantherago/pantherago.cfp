@@ -5,30 +5,51 @@
   <script src="wasm_exec.js"></script>
   <script src="gowasm.js"></script>
   <script src="main.js"></script>
+  <link rel="stylesheet" href="site.css" />
 
   <script>
-   
+
   </script>
 
 </head>
 
 <body>
 
-  <div>
-    <h2> BEGIN INDEX </h2>
-  </div>
+  <h2> BEGIN INDEX </h2>
+
 
   <h4>
     <a> Session ID : </a>
-    <go var="root.panthera-session"> </go>
+    <go var="root.panthera-session">
+      <div class="ph-item">
+        <div class="ph-col-12">
+          <div class="ph-row">
+            <div class="ph-col-4"></div>
+          </div>
+        </div>
+      </div>
+    </go>
   </h4>
 
-  <gocomp compid="sessionview1" compsrc="sessionview"></gocomp>
+
+  <gocomp compid="sessionview1" compsrc="sessionview">
+    <div class="ph-item">
+      <div class="ph-col-12">
+        <div class="ph-picture"></div>
+      </div>
+    </div>
+  </gocomp>
 
 
 
   <gocomp compid="dash1" compsrc="dash">
-    Placeholder content for dash component
+    <div class="ph-item">
+      <div class="ph-col-12">
+        <div class="ph-row">
+          <div class="ph-col-4"></div>
+        </div>
+      </div>
+    </div>
 
     <gocomp compid="internaldash" compsrc="intl">
       Generated internal component
@@ -40,7 +61,14 @@
 
 
   <gocomp compid="dash2" compsrc="dash" gopara-txtstyle="color:red">
-    Generated internal component
+    <div class="ph-item">
+      <div class="ph-col-12">
+        <div class="ph-row">
+          <div class="ph-col-4"></div>
+        </div>
+      </div>
+    </div>
+
     <gocomp compid="externalinternal1" compsrc="intl">
       Generated internal component externalinternal1
     </gocomp>
@@ -58,17 +86,52 @@
 
 
   <gocomp compid="footer1" compsrc="footer" year="2021">
-    Placeholder content for footer component
+    <!-- Placeholder content for footer component -->
+    <div class="ph-item">
+      <div class="ph-col-12">
+        <div class="ph-row">
+          <div class="ph-col-4"></div>
+        </div>
+      </div>
+    </div>
   </gocomp>
 
   <gocomp compid="counter1" compsrc="counter" count="200">
-    Placeholder content for counter1 component
+    <!-- Placeholder content for counter1 component -->
+    <div class="ph-item">
+      <div class="ph-col-12">
+        <div class="ph-row">
+          <div class="ph-col-4"></div>
+        </div>
+      </div>
+    </div>
   </gocomp>
 
   <div>
     <h2> END INDEX </h2>
   </div>
-
+  <!-- 
+  <div class="ph-item">
+    <div class="ph-col-12">
+      <div class="ph-picture"></div>
+      <div class="ph-row">
+        <div class="ph-col-4"></div>
+        <div class="ph-col-8 empty"></div>
+        <div class="ph-col-12"></div>
+      </div>
+    </div>
+    <div class="ph-col-2">
+    </div>
+    <div>
+      <div class="ph-row">
+        <div class="ph-col-12"></div>
+        <div class="ph-col-2"></div>
+        <div class="ph-col-10 empty"></div>
+        <div class="ph-col-8 big"></div>
+        <div class="ph-col-4 big empty"></div>
+      </div>
+    </div>
+  </div> -->
 
 </body>
 

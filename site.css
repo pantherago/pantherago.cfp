@@ -1,0 +1,137 @@
+/**
+ * placeholder-loading v0.4.0
+ * Author: Zalog (https://www.zalog.ro/)
+ * License: MIT
+ **/
+ .ph-item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.ph-item,.ph-item *,.ph-item :after,.ph-item :before {
+    box-sizing: border-box
+}
+
+.ph-item:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    width: 500%;
+    margin-left: -250%;
+    background: linear-gradient(90deg,hsla(0,0%,100%,0) 46%,hsla(0,0%,100%,.35) 50%,hsla(0,0%,100%,0) 54%) 50% 50%;
+    -webkit-animation: phAnimation .8s linear infinite;
+    animation: phAnimation .8s linear infinite;
+    content: " ";
+    pointer-events: none
+}
+
+.ph-item>* {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column;
+    margin-bottom: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem
+}
+
+.ph-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -0.5rem
+}
+
+.ph-row div {
+    height: 0.8rem;
+    margin-top: 0.75rem;
+    background-color: #ced4da
+}
+
+.ph-row .big,.ph-row.big div {
+    height: 2rem
+}
+
+.ph-row .empty {
+    background-color: hsla(0,0%,100%,0)
+}
+
+.ph-col-2 {
+    flex: 0 0 16.66667%
+}
+
+.ph-col-4 {
+    flex: 0 0 33.33333%
+}
+
+.ph-col-6 {
+    flex: 0 0 50%
+}
+
+.ph-col-8 {
+    flex: 0 0 66.66667%
+}
+
+.ph-col-10 {
+    flex: 0 0 83.33333%
+}
+
+.ph-col-12 {
+    flex: 0 0 100%
+}
+
+[class*=ph-col] {
+    direction: ltr
+}
+
+[class*=ph-col]>*+.ph-row {
+    margin-top: 0
+}
+
+[class*=ph-col]>*+* {
+    margin-top: 0.8rem
+}
+
+.ph-avatar {
+    position: relative;
+    width: 100%;
+    min-width: 6rem;
+    overflow: hidden;
+    background-color: #ced4da;
+    border-radius: 50%
+}
+
+.ph-avatar:before {
+    display: block;
+    padding-top: 100%;
+    content: " "
+}
+
+.ph-picture {
+    width: 100%;
+    height: 10rem;
+    background-color: #ced4da
+}
+
+@-webkit-keyframes phAnimation {
+    0% {
+        transform: translate3d(-30%,0,0)
+    }
+
+    to {
+        transform: translate3d(30%,0,0)
+    }
+}
+
+@keyframes phAnimation {
+    0% {
+        transform: translate3d(-30%,0,0)
+    }
+
+    to {
+        transform: translate3d(30%,0,0)
+    }
+}
