@@ -1,0 +1,69 @@
+<div>
+    <p>BEGIN COMP DASH</p>
+</div>
+<div>
+
+    <h1> PantheraGo </h1>
+    <div attr1="at1" goattributes="true" goattr-style="txtstyle" style="color:blue">
+
+        <h2>
+            Open-source project by <go var="company-name"> </go>
+        </h2>
+
+        <input type="text" readonly goattributes="true" goattr-value="root.time"> </input>
+
+        <h5>
+            <go var="root.panthera-session"> </go>
+        </h5>
+
+
+        <p>
+            <go var="bigtext">
+                <h3>I'm dummy text </h3>
+                I'll be here until PantheraGo replace me with actual content
+            </go>
+        </p>
+
+
+        <br>
+        <br>
+
+        <p>
+            This is a Go variable : <go var="myvar"> </go>
+        </p>
+
+        <br>
+
+        <div>
+            This is a GoFuncs. They run predefined Go functions and return the result as a GoVar : <go var="sayhello"> </go>
+        </div>
+
+    </div>
+    <br>
+
+
+    <div>
+        <go var="root.var1"></go>
+    </div>
+
+    <gocomp compid="counter1" compsrc="counter">
+        Placeholder content for counter1 component
+    </gocomp>
+
+    <br>
+    <br>
+
+    <div>
+        <h2>Textbox on keydown event - Partial Update of page</h2>
+        <input type="text" placeholder="Name of person"
+            onkeyup="GoEvent('txt-name-change','txt-name', document.getElementById('txt-name').value)">
+        <a>
+            <go var="name-result"></go>
+        </a>
+
+    </div>
+
+</div>
+<div>
+    <p>END COMP DASH</p>
+</div>

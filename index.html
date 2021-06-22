@@ -1,0 +1,75 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <script src="wasm_exec.js"></script>
+  <script src="gowasm.js"></script>
+  <script src="main.js"></script>
+
+  <script>
+   
+  </script>
+
+</head>
+
+<body>
+
+  <div>
+    <h2> BEGIN INDEX </h2>
+  </div>
+
+  <h4>
+    <a> Session ID : </a>
+    <go var="root.panthera-session"> </go>
+  </h4>
+
+  <gocomp compid="sessionview1" compsrc="sessionview"></gocomp>
+
+
+
+  <gocomp compid="dash1" compsrc="dash">
+    Placeholder content for dash component
+
+    <gocomp compid="internaldash" compsrc="intl">
+      Generated internal component
+    </gocomp>
+  </gocomp>
+  <div>
+    <h2> BETWEEN DASH1 AND DASH2 </h2>
+  </div>
+
+
+  <gocomp compid="dash2" compsrc="dash" gopara-txtstyle="color:red">
+    Generated internal component
+    <gocomp compid="externalinternal1" compsrc="intl">
+      Generated internal component externalinternal1
+    </gocomp>
+    <gocomp compid="externalinternal2" compsrc="intl">
+      Generated internal component externalinternal2
+      <gocomp compid="externalinternal22" compsrc="intl">
+        Generated internal component externalinternal22
+      </gocomp>
+    </gocomp>
+  </gocomp>
+
+  <div>
+    <h2> BETWEEN DASH2 AND FOOTER </h2>
+  </div>
+
+
+  <gocomp compid="footer1" compsrc="footer" year="2021">
+    Placeholder content for footer component
+  </gocomp>
+
+  <gocomp compid="counter1" compsrc="counter" count="200">
+    Placeholder content for counter1 component
+  </gocomp>
+
+  <div>
+    <h2> END INDEX </h2>
+  </div>
+
+
+</body>
+
+</html>
