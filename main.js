@@ -72,3 +72,13 @@ function HTTPGet(url) {
     delete HTTPGetCache[url]
     return r
 }
+
+function JS_HTTPGet(url) {
+    fetch(url)
+        .then(response => response.text().then(
+            respstr => {
+                JS_HTTPGot(url, respstr, "ok");
+                // HTTPGetCache[url] = respstr
+            }
+        ));
+}
